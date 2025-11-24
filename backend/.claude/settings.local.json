@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if [ -d \"node_modules\" ])",
+      "Bash(then echo \"node_modules exists\")",
+      "Bash(else echo \"node_modules missing - need to run npm install\")",
+      "Bash(fi)",
+      "Bash(npm install)",
+      "Bash(venvScriptsactivate)",
+      "Bash(uvicorn app.main:app:*)",
+      "Bash(source:*)",
+      "Bash(psql:*)",
+      "Bash(npm run dev:*)",
+      "Bash(pip install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
